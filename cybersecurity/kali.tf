@@ -73,6 +73,7 @@ resource "aws_network_interface" "kali_nic_public1" {
 }
 
 resource "aws_eip" "kali_public_ip" {
+  #domain                    = vpc
   vpc                       = true
   network_interface         = aws_network_interface.kali_nic_public1.id
   tags                                 = {
